@@ -183,3 +183,27 @@ footer{padding:36px 0; text-align:center; color:var(--muted); font-size:0.85rem;
   border-bottom:1px solid transparent;
 }
 .about-links a:hover{border-bottom-color:var(--teal);}
+
+.toast{
+  position:fixed; bottom:28px; right:28px; z-index:100;
+  display:flex; align-items:center; gap:14px;
+  padding:14px 18px; border-radius:6px;
+  font-family:'Inter', sans-serif; font-size:0.92rem;
+  box-shadow:0 12px 28px -10px rgba(20,25,43,0.35);
+  animation:toast-in 0.25s ease-out;
+  max-width:340px;
+}
+.toast-success{background:var(--teal); color:#fff;}
+.toast-error{background:#B3432B; color:#fff;}
+.toast-close{
+  background:none; border:none; color:inherit; font-size:1.2rem;
+  cursor:pointer; line-height:1; padding:0; opacity:0.8;
+}
+.toast-close:hover{opacity:1;}
+@keyframes toast-in{
+  from{transform:translateY(12px); opacity:0;}
+  to{transform:translateY(0); opacity:1;}
+}
+@media (max-width:640px){
+  .toast{left:20px; right:20px; bottom:20px; max-width:none;}
+}

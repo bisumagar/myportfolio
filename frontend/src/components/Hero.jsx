@@ -30,7 +30,7 @@ export default function Hero() {
     </div>
   </div>
         <div className="stack">
-          <div className="stack-bar"><span></span><span></span><span></span>&nbsp;request_lifecycle.log</div>
+          <div className="stack-bar"><span></span><span></span><span></span>&nbsp;tech_stack.json</div>
           <div className="stack-rows">
             {STACK_ROWS.map((row) => (
               <div className="stack-row" key={row.tag}>

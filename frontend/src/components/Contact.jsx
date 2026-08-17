@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { sendMessage } from '../api/api.js';
+import Toast from './Toast.jsx';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
+  const [toast, setToast] = useState(null); // { message, type } | null
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -16,8 +18,10 @@ export default function Contact() {
       await sendMessage(form);
       setStatus('sent');
       setForm({ name: '', email: '', message: '' });
+      setToast({ message: 'Message sent successfully!', type: 'success' });
     } catch {
       setStatus('error');
+      setToast({ message: 'Something went wrong. Please try again.', type: 'error' });
     }
   };
 
@@ -55,13 +59,19 @@ export default function Contact() {
             <button className="btn btn-solid" type="submit" disabled={status === 'sending'}>
               {status === 'sending' ? 'Sending…' : 'Send message'}
             </button>
-            {status === 'sent' && <p className="form-note">Thanks — your message was sent.</p>}
-            {status === 'error' && <p className="form-note">Something went wrong. Try again, or email directly below.</p>}
           </form>
 
-          <a className="direct-email" href="mailto:you@example.com">bm080458@gmail.com</a>
+          <a className="direct-email" href="mailto:you@example.com">you@example.com</a>
         </div>
       </div>
+
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+        />
+      )}
     </section>
   );
 }
