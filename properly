@@ -1,0 +1,19 @@
+[33mcommit 5ad97868ac2ea1fd7bb972dfb135f8bff08609b8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: bishal magar <bm080458@gmail.com>
+Date:   Mon Aug 17 12:00:45 2026 +0545
+
+    fix: add backend files properly
+
+[33mcommit 7128ed7c56302f55556ac117c9fe58a7696f5489[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: bishal magar <bm080458@gmail.com>
+Date:   Fri Aug 14 17:24:46 2026 +0545
+
+    feat: initialize frontend with React and Vite
+    
+    - Added package.json for project dependencies and scripts.
+    - Created main application structure with App component and routing.
+    - Implemented components: Header, Hero, Projects, About, Contact, Footer.
+    - Integrated API functions for fetching projects and sending messages.
+    - Styled application with index.css and responsive design.
+    - Added images and resume for portfolio.
+    - Configured Vite for development with proxy to backend API.

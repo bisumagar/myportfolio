@@ -16,7 +16,7 @@ export default function About() {
             </p>
 
             <div className=" about-links">
-              <a href="tel:+9779704168051">WhatsApp: +977 9704168051</a>
+              <a href="https://wa.me/9779704168051" target="_blank" rel="noreferrer">WhatsApp: +977 9704168051</a>
               <a href="https://www.linkedin.com/in/bishal-magar-22a19535a/" target="_blank" rel="noreferrer">LinkedIn</a>
               <a href="https://github.com/bisumagar" target="_blank" rel="noreferrer">GitHub</a>
             </div>
