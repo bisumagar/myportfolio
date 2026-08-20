@@ -61,7 +61,7 @@ export default function Contact() {
             </button>
           </form>
 
-          <a className="direct-email" href="mailto:you@example.com">you@example.com</a>
+          <a className="direct-email" href="mailto:you@example.com">bm080458@gmail.com</a>
         </div>
       </div>
 
